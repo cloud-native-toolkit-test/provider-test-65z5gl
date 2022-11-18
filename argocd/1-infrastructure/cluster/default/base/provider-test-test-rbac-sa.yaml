@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: provider-test-test-rbac-sa
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: provider-test
+    server: https://kubernetes.default.svc
+  project: 1-infrastructure
+  source:
+    path: payload/1-infrastructure/namespace/provider-test/test-rbac-sa
+    repoURL: https://github.com/cloud-native-toolkit-test/provider-test-65z5gl
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+      releaseName: test-rbac-sa
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences:
+    - jsonPointers:
+        - imagePullSecrets
+        - secrets
+      kind: ServiceAccount
