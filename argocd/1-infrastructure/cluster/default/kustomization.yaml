@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - base/namespace-provider-test.yaml
   - base/provider-test-sonarqube-sonarqube-sa.yaml
+  - base/provider-test-test-rbac-sa.yaml
