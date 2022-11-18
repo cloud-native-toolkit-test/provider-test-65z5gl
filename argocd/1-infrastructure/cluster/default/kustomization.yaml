@@ -5,4 +5,3 @@ resources:
   - base/provider-test-sonarqube-sonarqube-rbac.yaml
   - base/provider-test-sonarqube-sonarqube-sa.yaml
   - base/provider-test-sonarqube-sonarqube-scc.yaml
-  - base/provider-test-test-rbac-sa.yaml
