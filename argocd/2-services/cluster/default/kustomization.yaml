@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - base/provider-test-dashboard.yaml
   - base/provider-test-sonarqube.yaml
+  - base/provider-test-test-secret.yaml
