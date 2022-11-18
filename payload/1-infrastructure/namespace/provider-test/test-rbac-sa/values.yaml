@@ -1,0 +1,19 @@
+service-account:
+  create: true
+  allServiceAccounts: false
+  clusterScope: false
+  sccs: []
+  roles:
+    - name: cluster-admin
+  rules:
+    - apiGroups:
+        - ''
+      resources:
+        - configmaps
+        - secrets
+      verbs:
+        - '*'
+  rbacNamespace: ''
+  name: test-rbac
+  pullSecrets:
+    - test
