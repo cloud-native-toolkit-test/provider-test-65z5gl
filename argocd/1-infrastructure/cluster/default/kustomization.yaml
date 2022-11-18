@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - base/namespace-provider-test.yaml
+  - base/provider-test-provider-test-group.yaml
   - base/provider-test-sonarqube-sonarqube-rbac.yaml
   - base/provider-test-sonarqube-sonarqube-sa.yaml
   - base/provider-test-sonarqube-sonarqube-scc.yaml
